@@ -107,16 +107,21 @@ $matches = [
     <body>
         <h1>ITALIA: Lega A</h1>
         <h3>Ultimi risultati</h3>
-        
-            <?php
-                for ($i=0; $i < count($matches); $i++) {
-                    echo $matches[$i]["Team home"]["Team"]." - ";
-                    echo $matches[$i]["Team guest"]["Team"]." | ";
-                    echo $matches[$i]["Team home"]["Point"]." - ";
-                    echo $matches[$i]["Team guest"]["Point"]."<br>";
 
+            <ul>
+                <?php
+                for ($i=0; $i < count($matches); $i++) {
+                    // echo $matches[$i]["Team home"]["Team"]." - ";
+                    // echo $matches[$i]["Team guest"]["Team"]." | ";
+                    // echo $matches[$i]["Team home"]["Point"]." - ";
+                    // echo $matches[$i]["Team guest"]["Point"]."<br>";
+
+                    echo
+                    "<li>".$matches[$i]["Team home"]["Team"]." - ", $matches[$i]["Team guest"]["Team"]." | ", $matches[$i]["Team home"]["Point"]." - ", $matches[$i]["Team guest"]["Point"].
+                    "</li>";
                 };
-             ?>
+                ?>
+            </ul>
 
     </body>
 </html>
