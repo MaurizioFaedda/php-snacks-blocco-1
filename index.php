@@ -33,13 +33,32 @@ $matches = [
 
 ];
 
-var_dump($matches);
-$home_team = var_dump(($matches[0]["Team home"]["Team"]));
-$guest_team = var_dump(($matches[0]["Team guest"]["Team"]));
-
-
-
-
-
+// var_dump($matches);
+// $home_team = var_dump(($matches[0]["Team home"]["Team"]));
+// $point_team_home = var_dump(($matches[0]["Team home"]["Point"]));
+//
+// $guest_team = var_dump(($matches[0]["Team guest"]["Team"]));
+// $point_team_guest = var_dump(($matches[0]["Team guest"]["Point"]));
 
 ?>
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <h1>ITALIA: Lega A</h1>
+        <h3>Ultimi risultati</h3>
+        <ul>
+            <?php
+                for ($i=0; $i < count($matches); $i++) {
+                    echo $matches[$i]["Team home"]["Team"]." - ";
+                    echo $matches[$i]["Team guest"]["Team"]."<br>";
+
+                };
+             ?>
+        </ul>
+    </body>
+</html>
