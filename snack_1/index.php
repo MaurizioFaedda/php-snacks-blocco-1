@@ -30,6 +30,61 @@ $matches = [
             "Point" => 89
         ],
     ],
+    [
+        "Team home" => [
+            "Team" => "Trieste",
+            "Point" => 60
+        ],
+
+        "Team guest" => [
+            "Team" => "Virtus Bologna",
+            "Point" => 77
+        ],
+    ],
+    [
+        "Team home" => [
+            "Team" => "Olimpia Milano",
+            "Point" => 82
+        ],
+
+        "Team guest" => [
+            "Team" => "Brindisi",
+            "Point" => 88
+        ],
+    ],
+    [
+        "Team home" => [
+            "Team" => "Brescia",
+            "Point" => 71
+        ],
+
+        "Team guest" => [
+            "Team" => "Venezia",
+            "Point" => 69
+        ],
+    ],
+    [
+        "Team home" => [
+            "Team" => "Sassari",
+            "Point" => 97
+        ],
+
+        "Team guest" => [
+            "Team" => "Treviso",
+            "Point" => 93
+        ],
+    ],
+    [
+        "Team home" => [
+            "Team" => "Pesaro",
+            "Point" => 70
+        ],
+
+        "Team guest" => [
+            "Team" => "Fortitudo Bologna",
+            "Point" => 78
+        ],
+    ],
 
 ];
 
@@ -47,18 +102,21 @@ $matches = [
     <head>
         <meta charset="utf-8">
         <title></title>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <h1>ITALIA: Lega A</h1>
         <h3>Ultimi risultati</h3>
-        <ul>
+        
             <?php
                 for ($i=0; $i < count($matches); $i++) {
                     echo $matches[$i]["Team home"]["Team"]." - ";
-                    echo $matches[$i]["Team guest"]["Team"]."<br>";
+                    echo $matches[$i]["Team guest"]["Team"]." | ";
+                    echo $matches[$i]["Team home"]["Point"]." - ";
+                    echo $matches[$i]["Team guest"]["Point"]."<br>";
 
                 };
              ?>
-        </ul>
+
     </body>
 </html>
